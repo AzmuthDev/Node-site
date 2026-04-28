@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Send, Mail, MapPin } from "lucide-react";
+import { TextBlurReveal } from "@/components/ui/text-blur-reveal";
 
 export const Contact = () => {
   return (
@@ -15,12 +16,16 @@ export const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
-              Vamos construir algo <span className="text-[#19D1E6]">incrível.</span>
-            </h2>
-            <p className="text-[#B3CDD7]/80 text-lg mb-10 max-w-md">
-              Tem um projeto em mente? Preencha o formulário e nossa equipe entrará em contato em breve para transformá-lo em realidade.
-            </p>
+            <TextBlurReveal delay={0}>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+                Vamos construir algo <span className="text-[#19D1E6]">incrível.</span>
+              </h2>
+            </TextBlurReveal>
+            <TextBlurReveal delay={0.2}>
+              <p className="text-[#B3CDD7]/80 text-lg mb-10 max-w-md">
+                Tem um projeto em mente? Preencha o formulário e nossa equipe entrará em contato em breve para transformá-lo em realidade.
+              </p>
+            </TextBlurReveal>
 
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4 text-[#B3CDD7]/90">

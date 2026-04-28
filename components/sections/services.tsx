@@ -2,6 +2,7 @@
 
 import { Code2, PenTool, Cpu } from "lucide-react";
 import { motion } from "framer-motion";
+import { TextBlurReveal } from "@/components/ui/text-blur-reveal";
 
 const services = [
   {
@@ -29,24 +30,16 @@ export const Services = () => {
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-5xl font-bold mb-4 tracking-tight"
-          >
-            Nossos <span className="text-[#19D1E6]">Serviços</span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-[#B3CDD7]/80 max-w-2xl mx-auto"
-          >
-            Construímos o futuro do seu negócio com tecnologia de ponta e design focado em resultados.
-          </motion.p>
+          <TextBlurReveal delay={0}>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+              Nossos <span className="text-[#19D1E6]">Serviços</span>
+            </h2>
+          </TextBlurReveal>
+          <TextBlurReveal delay={0.2}>
+            <p className="text-[#B3CDD7]/80 max-w-2xl mx-auto">
+              Construímos o futuro do seu negócio com tecnologia de ponta e design focado em resultados.
+            </p>
+          </TextBlurReveal>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
