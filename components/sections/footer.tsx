@@ -2,7 +2,7 @@
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#052A3D] py-8 border-t border-[#B3CDD7]/5 w-full">
+    <footer className="bg-[#020617] py-8 border-t border-[#B3CDD7]/5 w-full">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="flex items-center gap-2">
           <span className="text-[#19D1E6] font-bold text-xl tracking-tighter">NODE.</span>

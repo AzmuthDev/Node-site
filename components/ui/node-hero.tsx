@@ -46,7 +46,7 @@ const navItems = ["Home", "Serviços", "Sobre", "Contato"];
 
 export const NodeHero = () => {
   return (
-    <section className="h-screen w-full relative bg-[#052A3D]">
+    <section className="h-screen w-full relative bg-[#020617]">
       <div className="relative h-full w-full overflow-hidden">
         
         {/* Background video */}
@@ -60,15 +60,15 @@ export const NodeHero = () => {
         />
 
         {/* Noise overlay */}
-        <div className="pointer-events-none absolute inset-0 opacity-[0.5] mix-blend-overlay bg-[#052A3D]" />
+        <div className="pointer-events-none absolute inset-0 opacity-[0.4] mix-blend-overlay bg-black" />
 
         {/* Gradient overlay */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#052A3D]/50 via-transparent to-[#052A3D]" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#020617]" />
 
         {/* Navbar */}
         <nav className="absolute left-1/2 top-0 z-20 -translate-x-1/2 w-full max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           <div className="text-[#19D1E6] font-bold text-2xl tracking-tighter">NODE.</div>
-          <div className="hidden md:flex items-center gap-6 rounded-full bg-[#052A3D]/40 backdrop-blur-md border border-[#B3CDD7]/10 px-6 py-2">
+          <div className="hidden md:flex items-center gap-6 rounded-full bg-black/40 backdrop-blur-md border border-[#B3CDD7]/10 px-6 py-2">
             {navItems.map((item) => (
               <a
                 key={item}
@@ -93,9 +93,7 @@ export const NodeHero = () => {
                 className="font-medium leading-[0.85] tracking-[-0.04em] text-[18vw] sm:text-[16vw] md:text-[14vw] lg:text-[12vw] xl:text-[10vw]"
                 style={{ color: "#B3CDD7" }}
               >
-                <WordsPullUp text="Conexão" showAsterisk />
-                <br />
-                <WordsPullUp text="Digital" />
+                <WordsPullUp text="Node" showAsterisk />
               </h1>
             </div>
 
@@ -118,7 +116,7 @@ export const NodeHero = () => {
                 className="group inline-flex items-center gap-3 self-start rounded-full bg-[#19D1E6] py-1 pl-6 pr-1 text-sm font-semibold text-[#052A3D] transition-all hover:bg-[#117192] hover:text-[#B3CDD7] sm:text-base"
               >
                 Iniciar Projeto
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#052A3D] transition-transform group-hover:scale-110 sm:h-10 sm:w-10">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black/80 transition-transform group-hover:scale-110 sm:h-10 sm:w-10">
                   <ArrowRight className="h-4 w-4 text-[#19D1E6]" />
                 </span>
               </motion.button>

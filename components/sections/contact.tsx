@@ -6,7 +6,7 @@ import { TextBlurReveal } from "@/components/ui/text-blur-reveal";
 
 export const Contact = () => {
   return (
-    <section id="contato" className="py-24 w-full bg-[#052A3D] relative border-t border-[#B3CDD7]/5">
+    <section id="contato" className="py-24 w-full bg-[#020617] relative border-t border-[#B3CDD7]/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
           

@@ -24,9 +24,9 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="serviços" className="py-24 w-full bg-[#052A3D] relative">
+    <section id="serviços" className="py-24 w-full bg-[#020617] relative">
       {/* Background glow effects */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[300px] bg-[#19D1E6]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[300px] bg-[#19D1E6]/[0.02] blur-[150px] rounded-full pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
