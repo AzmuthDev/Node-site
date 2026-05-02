@@ -80,12 +80,12 @@ const DigitalSerenity = () => {
       if (!scrolled) {
         setScrolled(true);
         floatingElementsRef.current.forEach((el, index) => {
-          setTimeout(() => {
-            if (el) {
+          if (el) {
+            setTimeout(() => {
               el.style.animationPlayState = 'running';
               el.style.opacity = ''; 
-            }
-          }, (parseFloat(el.style.animationDelay || "0") * 1000) + index * 100);
+            }, (parseFloat(el.style.animationDelay || "0") * 1000) + index * 100);
+          }
         });
       }
     };

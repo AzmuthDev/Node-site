@@ -25,7 +25,7 @@ export const TextBlurReveal = ({ text, children, className = "", delay = 0 }: Te
     },
   };
 
-  const item = {
+  const item: any = {
     hidden: { opacity: 0, y: 30, scale: 0.8, filter: "blur(10px)" },
     show: { 
       opacity: 1, 
@@ -34,7 +34,7 @@ export const TextBlurReveal = ({ text, children, className = "", delay = 0 }: Te
       filter: "blur(0px)",
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1],
       }
     },
   };
@@ -70,7 +70,7 @@ export const TextBlurReveal = ({ text, children, className = "", delay = 0 }: Te
       variants={{
         hidden: item.hidden,
         show: { ...item.show, transition: { ...item.show.transition, delay } }
-      }}
+      } as any}
       className={className}
     >
       {children}

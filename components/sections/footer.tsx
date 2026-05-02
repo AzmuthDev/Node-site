@@ -2,19 +2,14 @@
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#052A3D] py-8 border-t border-[#B3CDD7]/5 w-full">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+    <footer className="bg-[#020617] py-12 border-t border-white/5 w-full">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-2">
-          <span className="text-[#117192] font-bold text-xl tracking-tighter">NODE.</span>
+          <span className="text-white font-black text-2xl tracking-tighter">NODE.</span>
         </div>
-        <p className="text-[#B3CDD7]/60 text-sm text-center md:text-left">
+        <p className="text-[#B3CDD7]/40 text-sm font-light tracking-wide">
           &copy; {new Date().getFullYear()} Node Agência Digital. Todos os direitos reservados.
         </p>
-        <div className="flex items-center gap-6 text-sm text-[#B3CDD7]/70">
-          <a href="#" className="hover:text-[#117192] transition-colors">Instagram</a>
-          <a href="#" className="hover:text-[#117192] transition-colors">LinkedIn</a>
-          <a href="#" className="hover:text-[#117192] transition-colors">GitHub</a>
-        </div>
       </div>
     </footer>
   );
