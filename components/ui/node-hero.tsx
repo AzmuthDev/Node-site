@@ -92,7 +92,12 @@ export const NodeHero = () => {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-2"
         >
-          <img src="/images/node-logo.png" alt="Node" className="w-8 h-8 invert grayscale" />
+          <img 
+            src="/images/node-logo.png" 
+            alt="Node" 
+            className="w-8 h-8 grayscale" 
+            style={{ filter: 'invert(76%) sepia(88%) saturate(1487%) hue-rotate(143deg) brightness(101%) contrast(101%)' }}
+          />
           <span className="text-[#19D1E6] font-bold text-xl tracking-[0.1em]">NODE.</span>
         </motion.div>
         <motion.div 
@@ -183,7 +188,12 @@ export const NodeHero = () => {
           animate={{ opacity: 1, rotate: 0 }}
           className="w-12 h-12 rounded-xl bg-black/40 backdrop-blur-xl border border-[#B3CDD7]/10 flex items-center justify-center shadow-2xl"
         >
-          <img src="/images/node-logo.png" alt="" className="w-6 h-6 invert grayscale opacity-80" />
+          <img 
+            src="/images/node-logo.png" 
+            alt="" 
+            className="w-6 h-6 grayscale opacity-80" 
+            style={{ filter: 'invert(76%) sepia(88%) saturate(1487%) hue-rotate(143deg) brightness(101%) contrast(101%)' }}
+          />
         </motion.div>
       </div>
 

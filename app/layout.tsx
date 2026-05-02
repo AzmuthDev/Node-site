@@ -29,7 +29,8 @@ export default function RootLayout({
           <img 
             src="/images/node-logo.png" 
             alt="" 
-            className="w-[80vw] max-w-[1000px] h-auto invert grayscale" 
+            className="w-[80vw] max-w-[1000px] h-auto grayscale" 
+            style={{ filter: 'invert(76%) sepia(88%) saturate(1487%) hue-rotate(143deg) brightness(101%) contrast(101%)' }}
           />
         </div>
         {children}
