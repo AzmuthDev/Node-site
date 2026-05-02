@@ -36,7 +36,7 @@ export const SocialCard3D = () => {
           <div className="absolute top-3 right-3 w-[140px] aspect-square rounded-full bg-[#19D1E6]/5 [transform:translate3d(0,0,40px)] group-hover/card:[transform:translate3d(0,0,60px)] transition-all duration-500 delay-100" />
           <div className="absolute top-4 right-4 w-[110px] aspect-square rounded-full bg-[#19D1E6]/5 [transform:translate3d(0,0,60px)] group-hover/card:[transform:translate3d(0,0,80px)] transition-all duration-500 delay-200" />
           <div className="absolute top-5 right-5 w-[80px] aspect-square rounded-full bg-[#19D1E6]/5 [transform:translate3d(0,0,80px)] group-hover/card:[transform:translate3d(0,0,100px)] transition-all duration-500 delay-300" />
-          <div className="absolute top-8 right-8 w-[50px] aspect-square rounded-full bg-[#020617] [transform:translate3d(0,0,100px)] group-hover/card:[transform:translate3d(0,0,120px)] transition-all duration-500 delay-500 flex items-center justify-center p-3 shadow-xl">
+          <div className="absolute top-8 right-8 w-[60px] aspect-square rounded-full bg-[#020617] [transform:translate3d(0,0,100px)] group-hover/card:[transform:translate3d(0,0,120px)] transition-all duration-500 delay-500 flex items-center justify-center p-3 shadow-xl">
              <img 
                src="/images/node-logo.png" 
                alt="Node" 
