@@ -97,7 +97,7 @@ export function ServiceCarousel() {
           }}
           onDragStart={() => setIsDragging(true)}
           onDragEnd={() => setIsDragging(false)}
-          className="flex gap-8 px-[5vw] select-none"
+          className="flex gap-6 px-6 select-none"
         >
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} index={index} />
@@ -111,7 +111,7 @@ export function ServiceCarousel() {
 function ServiceCard({ service, index }: { service: Service, index: number }) {
   return (
     <motion.div
-      className="relative flex-shrink-0 w-[85vw] md:w-[450px] h-[600px] rounded-[40px] overflow-hidden group border border-white/5 bg-[#0a1120]"
+      className="relative flex-shrink-0 w-[85vw] md:w-[400px] h-[550px] rounded-[40px] overflow-hidden group border border-white/5 bg-[#0a1120]"
       whileHover={{ y: -10 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
