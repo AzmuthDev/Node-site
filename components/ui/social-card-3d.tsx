@@ -59,7 +59,7 @@ export const SocialCard3D = () => {
         {/* Bottom / Social Buttons */}
         <div className="bottom absolute bottom-6 left-6 right-6 flex items-center justify-between [transform:translate3d(0,0,26px)] [transform-style:preserve-3d]">
           <div className="social-buttons flex gap-3 [transform-style:preserve-3d]">
-            <SocialButton icon={<Instagram className="w-4 h-4" />} delay="0.4s" href="#" />
+            <SocialButton icon={<Instagram className="w-4 h-4" />} delay="0.4s" href="https://www.instagram.com/nod3.d3v?igsh=YTdjM25sNTVtYWR0" />
             <SocialButton icon={<Github className="w-4 h-4" />} delay="0.6s" href="#" />
             <SocialButton icon={<Linkedin className="w-4 h-4" />} delay="0.8s" href="#" />
           </div>
@@ -79,6 +79,8 @@ export const SocialCard3D = () => {
 const SocialButton = ({ icon, delay, href }: { icon: React.ReactNode, delay: string, href: string }) => (
   <a 
     href={href}
+    target="_blank"
+    rel="noopener noreferrer"
     className="social-button w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#020617] shadow-lg hover:bg-black hover:text-white transition-all duration-300 group-hover/card:[transform:translate3d(0,0,50px)]"
     style={{ transitionDelay: delay }}
   >
