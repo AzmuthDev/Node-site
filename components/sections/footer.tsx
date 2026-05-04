@@ -11,7 +11,7 @@ export const Footer = () => {
             className="w-12 h-12 grayscale" 
             style={{ filter: 'invert(76%) sepia(88%) saturate(1487%) hue-rotate(143deg) brightness(101%) contrast(101%)' }}
           />
-          <span className="text-white font-black text-3xl tracking-tighter">NODE.</span>
+          <span className="text-white font-black text-3xl tracking-tighter track-font">NODE.</span>
         </div>
         <p className="text-[#B3CDD7]/40 text-sm font-light tracking-wide">
           &copy; {new Date().getFullYear()} Node Agência Digital. Todos os direitos reservados.

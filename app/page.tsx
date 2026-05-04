@@ -28,10 +28,10 @@ export default function Home() {
                 line1: "NODE",
                 line2: ""
               }}
-              subtitle="A sua presença digital começa aqui. Criamos soluções de elite para empresas que buscam o próximo nível."
+              subtitle=""
               buttons={{
                 primary: {
-                  text: "Descobrir mais",
+                  text: "A sua presença digital começa aqui",
                   onClick: () => setShowMainContent(true)
                 }
               }}

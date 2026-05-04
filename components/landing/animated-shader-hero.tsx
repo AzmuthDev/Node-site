@@ -446,23 +446,17 @@ const Hero: React.FC<HeroProps> = ({
 
         <div className="text-center gap-0 max-w-5xl mx-auto px-4 flex flex-col items-center">
           {/* Logo */}
-          <div className="animate-fade-in-down">
             <img 
               src="/images/node-logo.png" 
               alt="Logo" 
-              className="w-80 h-80 md:w-[12rem] md:h-[12rem] object-contain"
-              style={{ filter: 'invert(76%) sepia(88%) saturate(1487%) hue-rotate(143deg) brightness(101%) contrast(101%)' }}
+              className="w-96 h-96 md:w-[15rem] md:h-[15rem] object-contain animate-logo-pulse"
             />
-          </div>
 
           {/* Main Heading with Animation */}
-          <div className="space-y-0 w-full mt-2">
-            <AnimatedText 
-              text={headline.line1} 
-              textClassName="text-5xl md:text-[5.5rem] lg:text-[7.5rem] font-black p-0 py-0 tracking-[0.25em] leading-tight"
-              gradientColors="linear-gradient(90deg, #19D1E6, #117192, #19D1E6)"
-              className="py-0"
-            />
+          <div className="space-y-0 w-full mt-[-2rem]">
+            <h1 className="text-5xl md:text-[6rem] lg:text-[8rem] text-white p-0 py-0 leading-none track-font">
+              {headline.line1}
+            </h1>
             {headline.line2 && (
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-[#19D1E6] to-[#117192] bg-clip-text text-transparent animate-fade-in-up animation-delay-400">
                 {headline.line2}
@@ -481,7 +475,7 @@ const Hero: React.FC<HeroProps> = ({
           
           {/* CTA Buttons with Animation */}
           {buttons && (
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6 animate-fade-in-up animation-delay-800">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4 animate-fade-in-up animation-delay-800">
               {buttons.primary && (
                 <ShinyButton 
                   onClick={buttons.primary.onClick}

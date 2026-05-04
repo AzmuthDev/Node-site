@@ -2,6 +2,13 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+@font-face {
+    font-family: 'Ethnocentric Rg';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ethnocentric Rg'), url('https://fonts.cdnfonts.com/s/6220/ethnocentric rg.woff') format('woff');
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -152,5 +159,31 @@
 
   .group:hover .glass-button-shadow {
     @apply bg-black/60 blur-lg;
+  }
+
+  .animate-logo-pulse {
+    animation: logo-pulse 4s ease-in-out infinite;
+  }
+
+  .track-font {
+    font-family: 'Ethnocentric Rg', sans-serif !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.1em !important;
+    display: inline-block !important;
+    line-height: 1 !important;
+  }
+}
+
+@keyframes logo-pulse {
+  0%, 100% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
+    transform: scale(1.05);
+    opacity: 1;
   }
 }

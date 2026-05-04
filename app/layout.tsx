@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Outfit, Syne } from "next/font/google";
 import "./globals.css";
+
+const syne = Syne({
+  subsets: ["latin"],
+  weight: ["400", "700", "800"],
+  variable: "--font-syne",
+});
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -21,7 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${outfit.className} h-full antialiased dark`}
+      className={`${outfit.className} ${syne.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-[#020617] text-[#B3CDD7] selection:bg-[#19D1E6]/30">
         {/* Site Watermark */}

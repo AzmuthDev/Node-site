@@ -98,7 +98,7 @@ export const NodeHero = () => {
             className="w-12 h-12 grayscale" 
             style={{ filter: 'invert(76%) sepia(88%) saturate(1487%) hue-rotate(143deg) brightness(101%) contrast(101%)' }}
           />
-          <span className="text-[#19D1E6] font-bold text-2xl tracking-[0.1em]">NODE.</span>
+          <span className="text-[#19D1E6] font-bold text-2xl tracking-[0.1em] track-font">NODE.</span>
         </motion.div>
         <motion.div 
           initial={{ opacity: 0, y: -10 }}
@@ -133,7 +133,7 @@ export const NodeHero = () => {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <h1
-              className="font-sans font-black leading-[0.8] tracking-[0.2em] text-[18vw] sm:text-[16vw] md:text-[14vw] lg:text-[12vw] xl:text-[11vw] mb-4 relative"
+              className="font-sans font-black leading-[0.8] tracking-[0.1em] text-[18vw] sm:text-[16vw] md:text-[14vw] lg:text-[12vw] xl:text-[11vw] mb-4 relative track-font"
               style={{ color: "#FFFDD0" }}
             >
               <WordsPullUp text="Node" />
@@ -148,9 +148,7 @@ export const NodeHero = () => {
               className="text-base text-[#B3CDD7] sm:text-lg lg:text-xl font-light mb-10"
               style={{ lineHeight: 1.6 }}
             >
-              Agência especializada em <span className="text-[#19D1E6] font-medium">Programação de Elite</span>, 
-              <br className="hidden md:block" /> 
-              UI/UX Design Imersivo e Automações Inteligentes.
+              Agência especializada em soluções digitais para sua empresa
             </motion.p>
 
             <motion.div
@@ -210,5 +208,3 @@ export const NodeHero = () => {
     </section>
   );
 };
-
-
