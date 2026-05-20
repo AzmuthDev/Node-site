@@ -537,7 +537,7 @@ float fbm(vec2 p) {
 float clouds(vec2 p) {
 	float d=1., t=.0;
 	for (float i=.0; i<3.; i++) {
-		float a=d*fbm(i*10.+p.x*.2+.2*(1.+i)*p.y+d+i*i+p);
+		float a=d*fbm(vec2(i*10.+p.x*.2+.2*(1.+i)*p.y+d+i*i)+p);
 		t=mix(t,d,a);
 		d=a;
 		p*=2./(i+1.);
@@ -550,13 +550,13 @@ void main(void) {
 	float bg=clouds(vec2(st.x+T*.5,-st.y));
 	uv*=1.-.3*(sin(T*.2)*.5+.5);
 	for (float i=1.; i<12.; i++) {
-		uv+=.1*cos(i*vec2(.1+.01*i, .8)+i*i+T*.5+.1*uv.x);
+		uv+=.1*cos(i*vec2(.1+.01*i, .8)+vec2(i*i+T*.5+.1*uv.x));
 		vec2 p=uv;
 		float d=length(p);
-		col+=.00125/d*(cos(sin(i)*vec3(0.2, 0.5, 1.5))+1.2);
-		float b=noise(i+p+bg*1.731);
-		col+=.002*b/length(max(p,vec2(b*p.x*.02,p.y)));
-		col=mix(col,vec3(bg*0.02, bg*0.1, bg*0.35),d);
+		col+=.00125/(d+0.0001)*(cos(sin(i)*vec3(0.2, 0.5, 1.5))+1.2);
+		float b=noise(vec2(i+bg*1.731)+p);
+		col+=.002*b/(length(max(p,vec2(b*p.x*.02,p.y)))+0.0001);
+		col=mix(col,vec3(bg*0.02, bg*0.1, bg*0.35),clamp(d,0.,1.));
 	}
 	O=vec4(col,1);
 }`;

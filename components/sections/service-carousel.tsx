@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useRef, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, useMotionValue } from "framer-motion"
 import { ArrowUpRight, Send, Mail, MapPin } from "lucide-react"
 
 interface Service {
@@ -49,13 +49,25 @@ export function ServiceCarousel() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [constraints, setConstraints] = useState({ left: 0, right: 0 })
 
+  const x = useMotionValue(0)
+  
   useEffect(() => {
     if (containerRef.current) {
       const scrollWidth = containerRef.current.scrollWidth
       const offsetWidth = containerRef.current.offsetWidth
-      setConstraints({ left: -(scrollWidth - offsetWidth + 100), right: 0 })
+      setConstraints({ left: -(scrollWidth - offsetWidth), right: 0 })
     }
   }, [])
+
+  // Update progress based on x value
+  useEffect(() => {
+    return x.on("change", (latest) => {
+      if (constraints.left !== 0) {
+        const progress = Math.abs(latest / constraints.left)
+        setDragProgress(Math.min(Math.max(progress, 0), 1))
+      }
+    })
+  }, [constraints.left, x])
 
   return (
     <section id="serviços" className="relative w-full bg-[#020617] py-32 overflow-hidden">
@@ -89,12 +101,7 @@ export function ServiceCarousel() {
           ref={containerRef}
           drag="x"
           dragConstraints={constraints}
-          onDrag={(e, info) => {
-            if (constraints.left !== 0) {
-              const progress = Math.abs(info.point.x / constraints.left)
-              setDragProgress(Math.min(Math.max(progress, 0), 1))
-            }
-          }}
+          style={{ x }}
           onDragStart={() => setIsDragging(true)}
           onDragEnd={() => setIsDragging(false)}
           className="flex gap-6 px-6 select-none"
@@ -112,6 +119,10 @@ function ServiceCard({ service, index }: { service: Service, index: number }) {
   const handleClick = () => {
     if (service.title === "Design") {
       window.open('/design-system', '_blank')
+    } else if (service.title === "Automação") {
+      window.open('/automacao', '_blank')
+    } else if (service.title === "Site") {
+      window.open('/site', '_blank')
     }
   }
 

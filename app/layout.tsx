@@ -28,6 +28,7 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       className={`${outfit.className} ${syne.variable} h-full antialiased dark`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-[#020617] text-[#B3CDD7] selection:bg-[#19D1E6]/30">
         {/* Site Watermark */}

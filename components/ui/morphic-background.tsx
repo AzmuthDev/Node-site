@@ -92,7 +92,7 @@ export const MorphicBackground: React.FC<MorphicBackgroundProps> = ({
 }) => {
   const particleContainerRef = useRef<HTMLDivElement>(null);
   const particlesRef = useRef<Particle[]>([]);
-  const animationFrameId = useRef<number>();
+  const animationFrameId = useRef<number>(0);
   const isPausedRef = useRef(false);
 
   useEffect(() => {
