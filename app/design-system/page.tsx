@@ -328,7 +328,7 @@ export default function DesignSystemPage() {
         className="fixed bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-white/5 backdrop-blur-2xl border border-white/10 p-3 rounded-[32px] z-[1000] shadow-2xl"
       >
         {[
-          { icon: Home, label: 'Home', href: '/' },
+          { icon: Home, label: 'Home', href: '/#serviços' },
           { icon: Shapes, label: 'Shapes', href: '#brand' },
           { icon: Palette, label: 'Palette', href: '#palette' },
           { icon: Code, label: 'Connect', href: '#nodes' },

@@ -368,7 +368,7 @@ export const ImageGallery = () => {
 
         {/* Header Overlay */}
         <div className="absolute top-8 left-8 z-20 pointer-events-none">
-          <Link href="/" className="pointer-events-auto flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-4 group">
+          <Link href="/#serviços" className="pointer-events-auto flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-4 group">
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
             <span className="text-sm font-medium uppercase tracking-widest">Voltar para Home</span>
           </Link>

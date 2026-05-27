@@ -5,11 +5,17 @@ import { NodeHero } from "@/components/ui/node-hero";
 import { ServiceCarousel } from "@/components/sections/service-carousel";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/sections/footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const [showMainContent, setShowMainContent] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && (window.location.hash || window.location.search.includes("main=true"))) {
+      setShowMainContent(true);
+    }
+  }, []);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between w-full overflow-hidden bg-[#020617] selection:bg-[#19D1E6]/30">

@@ -297,7 +297,7 @@ export default function SitePage() {
       {/* Floating back to home dock (Inspired by design system dock) */}
       <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-white/5 backdrop-blur-xl border border-white/10 p-2.5 rounded-[24px] z-[1000] shadow-2xl">
         <Link 
-          href="/" 
+          href="/#serviços" 
           className="w-12 h-12 rounded-xl flex items-center justify-center text-white/30 hover:text-[#FF007F] hover:bg-white/15 transition-all cursor-pointer relative group"
         >
           <Home className="w-5 h-5" />

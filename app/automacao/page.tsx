@@ -108,7 +108,7 @@ export default function AutomacaoPage() {
           animate={{ opacity: 1, y: 0 }}
           className="flex justify-between items-center bg-white/[0.02] border border-white/[0.06] backdrop-blur-xl rounded-[32px] px-8 py-4 mb-16"
         >
-          <Link href="/" className="flex items-center gap-3 text-xs font-black tracking-widest uppercase hover:text-[#EA6113] transition-colors group">
+          <Link href="/#serviços" className="flex items-center gap-3 text-xs font-black tracking-widest uppercase hover:text-[#EA6113] transition-colors group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Voltar
           </Link>
