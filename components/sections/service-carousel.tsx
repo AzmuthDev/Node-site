@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence, useMotionValue } from "framer-motion"
 import { ArrowUpRight, Send, Mail, MapPin } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 interface Service {
   title: string
@@ -116,13 +117,15 @@ export function ServiceCarousel() {
 }
 
 function ServiceCard({ service, index }: { service: Service, index: number }) {
+  const router = useRouter();
+
   const handleClick = () => {
     if (service.title === "Design") {
-      window.open('/design-system', '_blank')
+      router.push('/design-system')
     } else if (service.title === "Automação") {
-      window.open('/automacao', '_blank')
+      router.push('/automacao')
     } else if (service.title === "Site") {
-      window.open('/site', '_blank')
+      router.push('/site')
     }
   }
 
