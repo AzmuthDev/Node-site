@@ -126,6 +126,8 @@ function ServiceCard({ service, index }: { service: Service, index: number }) {
       router.push('/automacao')
     } else if (service.title === "Site") {
       router.push('/site')
+    } else if (service.title === "Aplicativo") {
+      router.push('/aplicativo')
     }
   }
 
